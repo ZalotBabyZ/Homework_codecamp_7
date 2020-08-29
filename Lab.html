@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML LAB</title>
+    <style>
+        * {
+            color: #266b6b;
+        }
+
+        a {
+            color: #74b974;
+            target: _blank;
+        }
+
+        h2 {
+            background-color: #266b6b;
+            color: #ffffff;
+            box-shadow: 2px 2px 10px 1px #9ab6b6;
+        }
+
+        h3 {
+            background-color: #578b8b;
+            color: #ffffff;
+            text-shadow: -2px 0 #3e7c7c, 0 2px #3e7c7c, 2px 0 #3e7c7c, 0 -2px #3e7c7c;
+        }
+
+        .Look {
+            background-color: #ffbebe;
+            Color: #b23f3f;
+        }
+
+        .Note {
+            color: #e7b892;
+        }
+
+        caption {
+            color: #74b974;
+            caption-side: bottom;
+            text-align: right;
+        }
+
+        table {
+            border: 3px solid #578b8b;
+            border-collapse: collapse;
+            padding: 15px;
+            text-align: left;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid #578b8b;
+        }
+
+        th {
+            background-color: #b8dab8;
+            text-align: center;
+        }
+
+        td.ColMerge {
+            background-color: #ffe9d7;
+            color: #B33f3f;
+            text-align: center;
+        }
+
+        @media print {
+            h2,h3:not(:first-child) {
+                page-break-before: always;
+            }
+        }
+    </style>
+
+</head>
+
+
+
+
+<body>
+    <h2>1. Attribute</h2>
+    <table>
+        <caption> Element and Attribute list </caption>
+        <thead>
+            <tr>
+                <th>Element </th>
+                <th> Attribute </th>
+                <th> Description </th>
+                <th> Attribute Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&lt;h&gt;</td>
+                <td colspan="2" class="ColMerge"> Global Attribute </td>
+                <td class="ColMerge">Read Global Attribute list table</td>
+            </tr>
+            <tr>
+                <td>&lt;p&gt;</td>
+                <td colspan="2" class="ColMerge"> Global Attribute </td>
+                <td class="ColMerge">Read Global Attribute list table</td>
+            </tr>
+            <tr>
+                <td>&lt;div&gt;</td>
+                <td colspan="2" class="ColMerge"> Global Attribute </td>
+                <td class="ColMerge">Read Global Attribute list table</td>
+            </tr>
+            <tr>
+                <td rowspan="7"> &lt;img&gt; </td>
+                <td> src </td>
+                <td> Specifies the path to the image </td>
+                <td> "path/url to image"</td>
+            </tr>
+            <tr>
+
+                <td> alt </td>
+                <td> Specifies an alternate text for an image </td>
+                <td> "Text defined image"</td>
+            </tr>
+            <tr>
+
+                <td> height </td>
+                <td> Specifies the height of an image </td>
+                <td> "10 <span class="Note">px by default</span>","100%"<br>etc.</td>
+            </tr>
+            <tr>
+
+                <td> width </td>
+                <td> Specifies the width of an image </td>
+                <td> "10 <span class="Note">px by default</span>","100%"<br>etc.</td>
+            </tr>
+            <tr>
+
+                <td> ismap </td>
+                <td> Specifies an image as a server-side image map </td>
+                <td> <span class="Note">"no AttributeValue"</span></td>
+            </tr>
+            <tr>
+
+                <td> usemap </td>
+                <td>Specifies an image as a client-side image map </td>
+                <td> "#mapName"</td>
+            </tr>
+            <tr>
+
+                <td> longdesc </td>
+                <td> Specifies a URL to a detailed description of an image </td>
+                <td> "#id"/"url"/"relative url"</td>
+            </tr>
+            <tr>
+                <td rowspan="7"> &lt;a&gt; </td>
+                <td> href </td>
+                <td> Specifies the URL of the page the link goes to </td>
+                <td> "url" / "path to file"</td>
+            </tr>
+            <tr>
+
+                <td> hreflang </td>
+                <td> Specifies the language of the linked document </td>
+                <td> "th" / "zh" / "en" <br> <a href="https://www.w3schools.com/tags/ref_language_codes.asp"> more
+                        &#128432;</a> </td>
+            </tr>
+            <tr>
+
+                <td> download </td>
+                <td> Specifies that the target will be downloaded when a user clicks on the hyperlink </td>
+                <td> <span class="Note">"no AttributeValue"</span></td>
+            </tr>
+            <tr>
+
+                <td> rel </td>
+                <td> Specifies the relationship between the current document and the linked document </td>
+                <td> "tag keyword" / "nofollow" <br>etc.</td>
+            </tr>
+            <tr>
+
+                <td> target </td>
+                <td> Specifies where to open the linked document </td>
+                <td> "_blank" / "_parent"<br> / "_self" / "_top"</td>
+            </tr>
+            <tr>
+
+                <td> media </td>
+                <td> Specifies what media/device the linked document is optimized for </td>
+                <td> <a href="https://www.w3schools.com/tags/att_a_media.asp"> List of AttributeValue &#128432;</a>
+                </td>
+            </tr>
+            <tr>
+
+                <td> ping </td>
+                <td> Specifies a list of URLs to which, when the link is followed, post requests with the body ping will
+                    be sent by the browser (in the background). Typically used for tracking. </td>
+                <td> " space-separated list of URLs"</td>
+            </tr>
+            <tr>
+                <td>&lt;ul&gt; </td>
+                <td colspan="2" class="ColMerge"> Global Attribute </td>
+                <td class="ColMerge">Read Global Attribute list table</td>
+            </tr>
+            <tr>
+                <td>&lt;ol&gt; </td>
+                <td colspan="2" class="ColMerge"> Global Attribute </td>
+                <td class="ColMerge">Read Global Attribute list table</td>
+            </tr>
+            <tr>
+                <td rowspan="2"> &lt;table&gt;</td>
+                <td> colspan </td>
+                <td> To make a cell span more than one column </td>
+                <td> "1" / "2" <br> etc.</td>
+            </tr>
+            <tr>
+
+                <td> rowspan </td>
+                <td> To make a cell span more than one row </td>
+                <td> "1" / "2" <br> etc.</td>
+            </tr>
+            <tr>
+                <td rowspan="9"> &lt;form&gt;</td>
+                <td> action </td>
+                <td> Specifies where to send the form-data when a form is submitted </td>
+                <td> "Url / Path to file "</td>
+            </tr>
+            <tr>
+
+                <td> autocomplete </td>
+                <td> Specifies whether a form should have autocomplete on or off<br>Based on values that the user has
+                    entered before </td>
+                <td> "on" / "off"</td>
+            </tr>
+            <tr>
+
+                <td> name </td>
+                <td> Specifies the name of a form </td>
+                <td> "FormName"</td>
+            </tr>
+            <tr>
+
+                <td> method </td>
+                <td> Specifies the HTTP method to use when sending form-data </td>
+                <td> "get" / "post"</td>
+            </tr>
+            <tr>
+
+                <td> rel </td>
+                <td> Specifies the relationship between a linked resource and the current document </td>
+                <td> <a href="https://www.w3schools.com/tags/tag_form.asp"> "external" / "help" / "license" / "next" /
+                        "nofollow" / "noopener" / "noreferrer" / "opener" / "prev" / "search" &#128432; </a></td>
+            </tr>
+            <tr>
+
+                <td> target </td>
+                <td> Specifies where to display the response that is received after submitting the form </td>
+                <td> "_blank" / "_parent"<br> / "_self" / "_top"</td>
+            </tr>
+            <tr>
+
+                <td> accept-charset </td>
+                <td> Specifies the character encodings that are to be used for the form submission </td>
+                <td> "UTF-8" / "ISO-8859-1" <br> <a href="https://www.w3schools.com/tags/ref_charactersets.asp"> more
+                        &#128432;</a></td>
+            </tr>
+            <tr>
+
+                <td> enctype </td>
+                <td> Specifies how the form-data should be encoded when submitting it to the server </td>
+                <td> "application/x-www-form-urlencoded" / "multipart/form-data" / "text/plain"</td>
+            </tr>
+            <tr>
+
+                <td> novalidate </td>
+                <td> Specifies that the form should not be validated when submitted </td>
+                <td> <span class="Note">"no AttributeValue"</span></td>
+            </tr>
+            <tr>
+                <td rowspan="11"> &lt;button&gt;</td>
+                <td> form </td>
+                <td> Specifies which form the button belongs to </td>
+                <td> "formID"</td>
+            </tr>
+            <tr>
+
+                <td> type </td>
+                <td> Specifies the type of button </td>
+                <td> "button" / "reset" / "submit"</td>
+            </tr>
+            <tr>
+
+                <td> name </td>
+                <td> Specifies the name for a &lt;button&gt; element<br><span class="Note">Reference form-data/element
+                        in JavaScript</span></td>
+                <td> " ButtonName "</td>
+            </tr>
+            <tr>
+
+                <td> value </td>
+                <td> Specifies an initial value for the button<br> <span class="Note"> Button's value is submitted only
+                        with the "submit" type attribute <br>Buttons with different values may share the same name to
+                        submit different values when used in the form</span> </td>
+                <td> "Button initial value"</td>
+            </tr>
+            <tr>
+
+                <td> autofocus </td>
+                <td> Specifies that a button should automatically get focus when the page loads </td>
+                <td> <span class="Note">"no AttributeValue"</span></td>
+            </tr>
+            <tr>
+
+                <td> disabled </td>
+                <td> Specifies that a button should be disabled </td>
+                <td> <span class="Note">"no AttributeValue"</span></td>
+            </tr>
+            <tr>
+
+                <td> formaction </td>
+                <td> Overrides the form's action attribute<br><span class="Look"> Only use in "submit" type attribute.
+                    </span><br><span class="Note"> Specifies where to send the form-data when a form is submitted
+                    </span> </td>
+                <td> "Url / Path to file "</td>
+            </tr>
+            <tr>
+
+                <td> formmethod </td>
+                <td> Overrides the form's method attribute<br><span class="Note">Specifies the HTTP method to use when
+                        sending form-data</span> </td>
+                <td> "get" / "post"</td>
+            </tr>
+            <tr>
+
+                <td> formtarget </td>
+                <td> Overrides the form's target attribute<br><span class="Look"> Only use in "submit" type attribute.
+                    </span><br><span class="Note"> Specifies where to display the response that is received after
+                        submitting the form</span> </td>
+                <td> "_blank" / "_parent"<br> / "_self" / "_top"</td>
+            </tr>
+            <tr>
+
+                <td> formenctype </td>
+                <td> Overrides the form's enctype attribute<br><span class="Look"> Only use in "submit" type attribute.
+                    </span><br><span class="Note">Specifies how the form-data should be encoded when submitting it to
+                        the server</span> </td>
+                <td> "application/x-www-form-urlencoded" / "multipart/form-data" / "text/plain"</td>
+            </tr>
+            <tr>
+
+                <td> formnovalidate </td>
+                <td> Overrides the form's novalidate attribute<br><span class="Look"> Only use in "submit" type
+                        attribute. </span><br><span class="Note"> Specifies that the form should not be validated when
+                        submitted</span> </td>
+                <td> <span class="Note">"no AttributeValue"</span></td>
+            </tr>
+        </tbody>
+    </table>
+    <p style="color:#ce6868;">All HTML elements can use 'Global Attribute'. <br> In this table, elements with 'Global
+        Attribute' marked are elements with no 'Required or Optional Attributes'. </p>
+
+    <h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ..1 Global Attribute list </h3>
+    <table>
+        <caption> Global Attribute Table </caption>
+        <thead>
+            <tr>
+                <th>Attribute </th>
+                <th> Note </th>
+                <th> Description </th>
+                <th> Attribute Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>id </td>
+                <td> </td>
+                <td> Specifies a <span class="Look">unique</span> id for an element </td>
+                <td> "IdName"</td>
+            </tr>
+            <tr>
+                <td>class </td>
+                <td> </td>
+                <td> Specifies <span class="Look">one or more</span> classnames for an element </td>
+                <td> "ClassName"</td>
+            </tr>
+            <tr>
+                <td>style </td>
+                <td> </td>
+                <td> Specifies an inline CSS style for an element </td>
+                <td> "property1:value1;property2:value2;"</td>
+            </tr>
+            <tr>
+                <td>title </td>
+                <td> </td>
+                <td> Specifies extra information about an element </td>
+                <td> "more information here"</td>
+            </tr>
+            <tr>
+                <td>dir </td>
+                <td> </td>
+                <td> text direction for the content </td>
+                <td> "ltr" <span class="Note">(left-to-right)</span> <br> / "rtl" / "auto"</td>
+            </tr>
+            <tr>
+                <td>lang </td>
+                <td> </td>
+                <td> Specifies the language of the element's content </td>
+                <td> "th" / "zh" / "en" <br> <a href="https://www.w3schools.com/tags/ref_language_codes.asp"> more
+                        &#128432; </a></td>
+            </tr>
+            <tr>
+                <td>xml:lang </td>
+                <td> </td>
+                <td> indicate the language of content directly associated with the XML document </td>
+                <td> "th" / "zh" / "en" <br> <a href="https://www.w3schools.com/tags/ref_language_codes.asp"> more
+                        &#128432; </a></td>
+            </tr>
+            <tr>
+                <td>translate </td>
+                <td> </td>
+                <td> whether the content of an element should be translated or not </td>
+                <td> "yes" / "no"</td>
+            </tr>
+            <tr>
+                <td>acesskey </td>
+                <td> &lt;button&gt;<br>&lt;a&gt; </td>
+                <td> Specifies a shortcut key to activate/focus an element </td>
+                <td> "KeyChar"</td>
+            </tr>
+            <tr>
+                <td>tabindex </td>
+                <td> &lt;button&gt;<br>&lt;a&gt; </td>
+                <td> Specifies the tabbing order of an element </td>
+                <td> "1" / "2" <br> etc.</td>
+            </tr>
+            <tr>
+                <td>onclick </td>
+                <td> * <br> event attribute </td>
+                <td> Fires on a mouse click on the element </td>
+                <td> "myFunction()"</td>
+            </tr>
+            <tr>
+                <td>ondblclick </td>
+                <td> * <br> event attribute </td>
+                <td> Fires on a mouse double-click on the element </td>
+                <td> "myFunction()"</td>
+            </tr>
+            <tr>
+                <td>onmousedown </td>
+                <td> * <br> event attribute </td>
+                <td> Fires when a mouse button is pressed down on an element </td>
+                <td> "myFunction()"</td>
+            </tr>
+            <tr>
+                <td>onmousemove </td>
+                <td> * <br> event attribute </td>
+                <td> Fires when the mouse pointer is moving while it is over an element </td>
+                <td> "myFunction()"</td>
+            </tr>
+            <tr>
+                <td>onmouseout </td>
+                <td> * <br> event attribute </td>
+                <td> Fires when the mouse pointer moves out of an element </td>
+                <td> "myFunction()"</td>
+            </tr>
+            <tr>
+                <td>onmouseup </td>
+                <td> * <br> event attribute </td>
+                <td> Fires when a mouse button is released over an element </td>
+                <td> "myFunction()"</td>
+            </tr>
+            <tr>
+                <td>onkeydown </td>
+                <td> * <br> event attribute </td>
+                <td> Fires when a user is pressing a key </td>
+                <td> "myFunction()"</td>
+            </tr>
+            <tr>
+                <td>onkeypress </td>
+                <td> * <br> event attribute </td>
+                <td> Fires when a user presses a key </td>
+                <td> "myFunction()"</td>
+            </tr>
+            <tr>
+                <td>onkeyup </td>
+                <td> * <br> event attribute </td>
+                <td> Fires when a user releases a key </td>
+                <td> "myFunction()"</td>
+            </tr>
+            <tr>
+                <td>onabort </td>
+                <td> &lt;img&gt;<br> event attribute </td>
+                <td> Fires when a user aborts the loading of an &lt;img&gt; or &lt;input type="image"&gt;
+                    element </td>
+                <td> "myFunction()"</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="pagebreak"> </div>
+    <h2>2. Differentiation Tag</h2>
+
+
+    <table>
+        <caption>Differentiation Tag </caption>
+        <thead>
+            <tr>
+                <th>Element </th>
+                <th> Similarity </th>
+                <th> Difference </th>
+                <th> Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&lt;hr&gt; </td>
+                <td rowspan="2">
+                    <ul>
+                        <li> Defines single line break</li>
+                        <li> Empty element</li>
+                    </ul>
+                </td>
+                <td> Displayed a horizontal rule in </td>
+                <td> Lorem ipsum dolor
+                    <hr>Lorem ipsum dolor </td>
+            </tr>
+            <tr>
+                <td>&lt;br&gt; </td>
+
+                <td> Only enter a line break [No horizontal rule] </td>
+                <td> Lorem ipsum dolor<br>Lorem ipsum dolor</td>
+            </tr>
+            <tr>
+                <td>&lt;ul&gt; </td>
+                <td rowspan="2">
+                    <ul>
+                        <li> Defines a list </li>
+                        <li> Use together with &lt;li&gt; </li>
+                    </ul>
+                </td>
+                <td> Unordered list [ bullet ] </td>
+                <td>
+                    <ul>
+                        <li> Ant </li>
+                        <li> Bird </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;ol&gt; </td>
+
+                <td> ordered list [ Number ] </td>
+                <td>
+                    <ol>
+                        <li> Ant </li>
+                        <li> Bird </li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;select&gt; </td>
+                <td rowspan="3"> Miltiple choices </td>
+                <td>
+                    <ul>
+                        <li> drop-down list </li>
+                        <li> &lt;option&gt; define the available options </li>
+                    </ul>
+                </td>
+                <td><select name="Examp">
+                        <option value="Ant">Ant</option>
+                        <option value="Bird">Bird</option>
+                        <option value="Cat">Cat</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td>&lt;input type="checkbox"&gt; </td>
+
+                <td>
+                    <ul>
+                        <li> User select ZERO or MORE options</li>
+                        <li> Value of &lt;input&gt; type attribute </li>
+                    </ul>
+                </td>
+                <td>
+                    <form><input type="checkbox" name="check"><input type="checkbox" name="check"><input type="checkbox"
+                            name="check"></form>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;input type="ratio"&gt; </td>
+
+                <td>
+                    <ul>
+                        <li> User select ONLY ONE option </li>
+                        <li> Value of &lt;input&gt; type attribute </li>
+                    </ul>
+                </td>
+                <td>
+                    <form><input type="radio" name="rad"> <input type="radio" name="rad"> <input type="radio"
+                            name="rad"></form>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;div&gt; </td>
+                <td rowspan="2"> Container for HTML elements </td>
+                <td>
+                    <ul>
+                        <li> Block-level element </li>
+                        <li> By default, browsers always place a line break before and after the this element</li>
+                    </ul>
+                </td>
+                <td> content before div <div style="color:red; background-color:#ffd7d7;"> Div Content </div> content
+                    after div </td>
+            </tr>
+            <tr>
+                <td>&lt;span&gt; </td>
+
+                <td> Inline element </td>
+                <td>content before span <span style="color:black; background-color:#ffd7d7;"> Span Content </span>
+                    content after span</td>
+            </tr>
+            <tr>
+                <td>&lt;script&gt; </td>
+                <td rowspan="2">
+                    <ul>
+                        <li> Embed external element </li>
+                        <li> Specify how HTML elements should provide in client-side </li>
+                    </ul>
+                </td>
+                <td> Embed a client-side script (JavaScript) </td>
+                <td> <span class="Note">"no Example"</span></td>
+            </tr>
+            <tr>
+                <td>&lt;style&gt; </td>
+
+                <td> Define style information (CSS) </td>
+                <td> <span class="Note">"no Example"</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+    <div class="pagebreak"> </div>
+
+
+    <h2>3. Input Type</h2>
+    <form>
+        <table>
+            <caption>Input Type *use with &lt;form&gt; and &lt;label&gt; element*</caption>
+            <thead>
+                <tr>
+                    <th>Input Type </th>
+                    <th> Description </th>
+                    <th> Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&lt;input type="text"&gt; </td>
+                    <td> <span class="Look">DEFAULT VALUE</span><br>Single-line text input field
+                    </td>
+                    <td> <input type="text" placeholder="Type Here"></td>
+                </tr>
+                <tr>
+                    <td>&lt;input type="number"&gt; </td>
+                    <td> Numeric input field <div class="Note">max="max num" min="min num" step="step num"
+                        </div>
+                    </td>
+                    <td><input type="number" placeholder="12345"></td>
+                </tr>
+                <tr>
+                    <td>&lt;input type="tel"&gt; </td>
+                    <td> Tel-Num input field<div class="Note">pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"</div>
+                    </td>
+                    <td> <input type="tel" placeholder="XXX-XXX-XXXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                    </td>
+                </tr>
+                <tr>
+                    <td>&lt;input type=" url"&gt; </td>
+                    <td> Url input field </td>
+                    <td> <input type="url" placeholder="https://www.anywebpage.com"></td>
+                </tr>
+                <tr>
+                    <td>&lt;input type="email"&gt; </td>
+                    <td> Email address input field </td>
+                    <td> <input type="email" placeholder="User@xmail.com"></td>
+                </tr>
+                <tr>
+                    <td>&lt;input type="password"&gt; </td>
+                    <td> password field<div class="Note">characters are masked </div>
+                    </td>
+                    <td> <input type="password" value="password"></td>
+                </tr>
+                <tr>
+                    <td>&lt;input type="search"&gt; </td>
+                    <td> behaves like a regular text field </td>
+                    <td> <input type="search" placeholder="Keyword"></td>
+                </tr>
+                <tr>
+                    <td>&lt;input type="button"&gt; </td>
+                    <td>
+                        <span class="Look">Button</span><br>
+                    </td>
+                    <td> <input type="button" onclick="alert('Use with script')" value="PRESS"></td>
+                </tr>
+                <tr>
+                    <td>&lt;input type="submit"&gt; </td>
+                    <td>
+                        <span class="Look">Button</span><br> Submitting form data to a form-handler
+                    </td>
+                    <td> <input type="submit" value="!---SUBMIT CLICK---!"></td>
+                </tr>
+                <tr>
+                    <td>&lt;input type="image"&gt; </td>
+                    <td>
+                        <span class="Look">Button</span><br> Image as a submit button<div class="Note">
+                            src="img.ext"
+                            alt="keyword" style="float:right" width="num" height="num" </div>
+                    </td>
+                    <td> <input type="image"
+                            src="https://drive.google.com/uc?export=download&id=1Rnfrjoqwncz-RdqVgwuTvoY_iGmgMtHQ"
+                            height="30"></td>
+                </tr>
+                <tr>
+                    <td>&lt;input type="reset"&gt; </td>
+                    <td>
+                        <span class="Look">Button</span><br> Reset all form values to their default values
+                    </td>
+                    <td> <input type="reset" value="!---RESET CLICK---!"></td>
+                </tr>
+                <tr>
+                    <td>&lt;input type="radio"&gt; </td>
+                    <td>
+                        <span class="Look">Box</span><br> User <span class="Look">select ONLY ONE </span>of
+                        a limited number of
+                        choices<div class="Note">name="same name"</div>
+                    </td>
+                    <td> <input type="radio" name="rad"> <input type="radio" name="rad"> <input type="radio" name="rad">
+                    </td>
+                </tr>
+                <tr>
+                    <td>&lt;input type="checkbox"&gt; </td>
+                    <td>
+                        <span class="Look">Box</span><br> User <span class="Look">select ZERO or MORE
+                            options </span>of a limited
+                        number of choices<div class="Note">name="same name"</div>
+                    </td>
+                    <td> <input type="checkbox" name="check"><input type="checkbox" name="check"><input type="checkbox"
+                            name="check"></td>
+                </tr>
+                <tr>
+                    <td>&lt;input type="range"&gt; </td>
+                    <td> Slider control <div class="Note">max="max num" min="min num" step="step num" </div>
+                    </td>
+                    <td> <input type="range" min="0" max="100" step="10"></td>
+                </tr>
+                <tr>
+                    <td>&lt;input type="color"&gt; </td>
+                    <td> Color picker field </td>
+                    <td> <input type="color" value="#74bb974"></td>
+                </tr>
+                <tr>
+                    <td>&lt;input type="date"&gt; </td>
+                    <td> Date picker field </td>
+                    <td> <input type="date"></td>
+                </tr>
+                <tr>
+                    <td>&lt;input type="week"&gt; </td>
+                    <td> Week picker field </td>
+                    <td> <input type="week"></td>
+                </tr>
+                <tr>
+                    <td>&lt;input type="month"&gt; </td>
+                    <td> Month picker field </td>
+                    <td> <input type="month"></td>
+                </tr>
+                <tr>
+                    <td>&lt;input type="datetime-local"&gt; </td>
+                    <td> Date-Time picker field </td>
+                    <td> <input type="datetime-local"></td>
+                </tr>
+                <tr>
+                    <td>&lt;input type="time"&gt; </td>
+                    <td> Time picker field </td>
+                    <td> <input type="time"></td>
+                </tr>
+                <tr>
+                    <td>&lt;input type="file"&gt; </td>
+                    <td>
+                        <span class="Look">Button</span><br>File-select
+                    </td>
+                    <td> <input type="file"></td>
+                </tr>
+                <tr>
+                    <td>&lt;input type="hidden"&gt; </td>
+                    <td> Hidden field cannot be seen or modified by users or any browser tool </td>
+                    <td><input type="hidden"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+
+</html>
