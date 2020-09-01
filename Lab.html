@@ -10,9 +10,18 @@
             color: #266b6b;
         }
 
-        a {
+        .more {
             color: #74b974;
             target: _blank;
+        }
+
+        .more::after {
+            content: "";
+            background-image: url('https://drive.google.com/uc?export=download&id=1Rnfrjoqwncz-RdqVgwuTvoY_iGmgMtHQ');
+            background-size: 100% 100%;
+            display: inline-block;
+            height: 15px;
+            width:  15px;
         }
 
         h2 {
@@ -67,7 +76,9 @@
         }
 
         @media print {
-            h2,h3:not(:first-child) {
+
+            h2:not(:first-of-type),
+            h3 {
                 page-break-before: always;
             }
         }
@@ -158,8 +169,9 @@
 
                 <td> hreflang </td>
                 <td> Specifies the language of the linked document </td>
-                <td> "th" / "zh" / "en" <br> <a href="https://www.w3schools.com/tags/ref_language_codes.asp"> more
-                        &#128432;</a> </td>
+                <td> "th" / "zh" / "en" <br> <a class="more"
+                        href="https://www.w3schools.com/tags/ref_language_codes.asp"> more
+                    </a> </td>
             </tr>
             <tr>
 
@@ -183,7 +195,7 @@
 
                 <td> media </td>
                 <td> Specifies what media/device the linked document is optimized for </td>
-                <td> <a href="https://www.w3schools.com/tags/att_a_media.asp"> List of AttributeValue &#128432;</a>
+                <td> <a class="more" href="https://www.w3schools.com/tags/att_a_media.asp"> List of AttributeValue </a>
                 </td>
             </tr>
             <tr>
@@ -244,8 +256,9 @@
 
                 <td> rel </td>
                 <td> Specifies the relationship between a linked resource and the current document </td>
-                <td> <a href="https://www.w3schools.com/tags/tag_form.asp"> "external" / "help" / "license" / "next" /
-                        "nofollow" / "noopener" / "noreferrer" / "opener" / "prev" / "search" &#128432; </a></td>
+                <td> <a class="more" href="https://www.w3schools.com/tags/tag_form.asp"> "external" / "help" / "license"
+                        / "next" /
+                        "nofollow" / "noopener" / "noreferrer" / "opener" / "prev" / "search" </a></td>
             </tr>
             <tr>
 
@@ -257,8 +270,9 @@
 
                 <td> accept-charset </td>
                 <td> Specifies the character encodings that are to be used for the form submission </td>
-                <td> "UTF-8" / "ISO-8859-1" <br> <a href="https://www.w3schools.com/tags/ref_charactersets.asp"> more
-                        &#128432;</a></td>
+                <td> "UTF-8" / "ISO-8859-1" <br> <a class="more"
+                        href="https://www.w3schools.com/tags/ref_charactersets.asp"> more
+                    </a></td>
             </tr>
             <tr>
 
@@ -401,15 +415,17 @@
                 <td>lang </td>
                 <td> </td>
                 <td> Specifies the language of the element's content </td>
-                <td> "th" / "zh" / "en" <br> <a href="https://www.w3schools.com/tags/ref_language_codes.asp"> more
-                        &#128432; </a></td>
+                <td> "th" / "zh" / "en" <br> <a class="more"
+                        href="https://www.w3schools.com/tags/ref_language_codes.asp"> more
+                    </a></td>
             </tr>
             <tr>
                 <td>xml:lang </td>
                 <td> </td>
                 <td> indicate the language of content directly associated with the XML document </td>
-                <td> "th" / "zh" / "en" <br> <a href="https://www.w3schools.com/tags/ref_language_codes.asp"> more
-                        &#128432; </a></td>
+                <td> "th" / "zh" / "en" <br> <a class="more"
+                        href="https://www.w3schools.com/tags/ref_language_codes.asp"> more
+                    </a></td>
             </tr>
             <tr>
                 <td>translate </td>
@@ -619,7 +635,7 @@
                 <td>&lt;script&gt; </td>
                 <td rowspan="2">
                     <ul>
-                        <li> Embed external element </li>
+                        <li> Embed internal element </li>
                         <li> Specify how HTML elements should provide in client-side </li>
                     </ul>
                 </td>
