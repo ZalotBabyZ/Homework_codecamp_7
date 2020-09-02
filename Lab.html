@@ -9,46 +9,35 @@
         * {
             color: #266b6b;
         }
-
-        .more {
-            color: #74b974;
-            target: _blank;
-        }
-
-        .more::after {
-            content: "";
-            background-image: url('https://drive.google.com/uc?export=download&id=1Rnfrjoqwncz-RdqVgwuTvoY_iGmgMtHQ');
-            background-size: 100% 100%;
-            display: inline-block;
-            height: 15px;
-            width:  15px;
-        }
-
         h2 {
             background-color: #266b6b;
             color: #ffffff;
             box-shadow: 2px 2px 10px 1px #9ab6b6;
         }
-
         h3 {
             background-color: #578b8b;
             color: #ffffff;
             text-shadow: -2px 0 #3e7c7c, 0 2px #3e7c7c, 2px 0 #3e7c7c, 0 -2px #3e7c7c;
         }
-
+        
+        .more {
+            color: #74b974;
+            target: _blank;
+        }
+                .more::after {
+                content: "";
+                background-image: url('https://drive.google.com/uc?export=download&id=1Rnfrjoqwncz-RdqVgwuTvoY_iGmgMtHQ');
+                background-size: 100% 100%;
+                display: inline-block;
+                height: 15px;
+                width: 15px;
+            }
         .Look {
             background-color: #ffbebe;
             Color: #b23f3f;
         }
-
         .Note {
             color: #e7b892;
-        }
-
-        caption {
-            color: #74b974;
-            caption-side: bottom;
-            text-align: right;
         }
 
         table {
@@ -58,22 +47,57 @@
             text-align: left;
             width: 100%;
         }
+            th,td {
+                border: 1px solid #578b8b;
+            }
+            th {
+                background-color: #b8dab8;
+                text-align: center;
+            }
+                td.ColMerge {
+                    background-color: #ffe9d7;
+                    color: #B33f3f;
+                    text-align: center;
+                }
+            caption {
+                color: #74b974;
+                caption-side: bottom;
+                text-align: right;
+            }
 
-        th,
-        td {
-            border: 1px solid #578b8b;
-        }
-
-        th {
-            background-color: #b8dab8;
-            text-align: center;
-        }
-
-        td.ColMerge {
-            background-color: #ffe9d7;
-            color: #B33f3f;
-            text-align: center;
-        }
+            .Dropdown{
+                list-style-type:none;
+                background-color:#ffe9d7;;
+                padding:5px;
+                margin:0px;
+                border:#b2733f 5px double;
+                width:150px;
+                position: fixed;
+                right:6px;
+                text-align: center;
+            }
+            .Dropdown a{
+                display: block;
+                text-decoration-line: none;
+                color: #b23f3f;
+                padding:10px;
+                font-size: 30;
+                transition: background-color .3s;
+            }
+            .Dropdown li{
+                color: #b2733f;
+            }
+            .Dropdown a:hover{
+                background-color: #ffbebe;
+            }
+            .Dropdown li:not(:first-child){
+                display: none;                
+            }
+            .Dropdown:hover li:not(:first-child){
+                display:block;
+                border-top: 1px #ce9668 dashed;
+                z-index: 1;
+            }
 
         @media print {
 
@@ -81,16 +105,26 @@
             h3 {
                 page-break-before: always;
             }
+            ul{
+                visibility: hidden;
+            }
         }
     </style>
 
 </head>
 
-
-
-
 <body>
-    <h2>1. Attribute</h2>
+    
+    <ul class="Dropdown">
+        <li>DROPDOWN &#128432;</li>
+        <li><a href="#Att">Attribute</a></li>
+        <li><a href="#globAtt"> _Global attribute</a></li>
+        <li><a href="#diffTag">Differentiation Tag</a></li>
+        <li><a href="#intType">Input Type</a></li>
+        <li><a href="#txtFor">Text Format</a></li>
+    </ul>
+
+    <h2 id="Att">1. Attribute</h2>
     <table>
         <caption> Element and Attribute list </caption>
         <thead>
@@ -124,37 +158,31 @@
                 <td> "path/url to image"</td>
             </tr>
             <tr>
-
                 <td> alt </td>
                 <td> Specifies an alternate text for an image </td>
                 <td> "Text defined image"</td>
             </tr>
             <tr>
-
                 <td> height </td>
                 <td> Specifies the height of an image </td>
                 <td> "10 <span class="Note">px by default</span>","100%"<br>etc.</td>
             </tr>
             <tr>
-
                 <td> width </td>
                 <td> Specifies the width of an image </td>
                 <td> "10 <span class="Note">px by default</span>","100%"<br>etc.</td>
             </tr>
             <tr>
-
                 <td> ismap </td>
                 <td> Specifies an image as a server-side image map </td>
                 <td> <span class="Note">"no AttributeValue"</span></td>
             </tr>
             <tr>
-
                 <td> usemap </td>
                 <td>Specifies an image as a client-side image map </td>
                 <td> "#mapName"</td>
             </tr>
             <tr>
-
                 <td> longdesc </td>
                 <td> Specifies a URL to a detailed description of an image </td>
                 <td> "#id"/"url"/"relative url"</td>
@@ -166,7 +194,6 @@
                 <td> "url" / "path to file"</td>
             </tr>
             <tr>
-
                 <td> hreflang </td>
                 <td> Specifies the language of the linked document </td>
                 <td> "th" / "zh" / "en" <br> <a class="more"
@@ -174,32 +201,27 @@
                     </a> </td>
             </tr>
             <tr>
-
                 <td> download </td>
                 <td> Specifies that the target will be downloaded when a user clicks on the hyperlink </td>
                 <td> <span class="Note">"no AttributeValue"</span></td>
             </tr>
             <tr>
-
                 <td> rel </td>
                 <td> Specifies the relationship between the current document and the linked document </td>
                 <td> "tag keyword" / "nofollow" <br>etc.</td>
             </tr>
             <tr>
-
                 <td> target </td>
                 <td> Specifies where to open the linked document </td>
                 <td> "_blank" / "_parent"<br> / "_self" / "_top"</td>
             </tr>
             <tr>
-
                 <td> media </td>
                 <td> Specifies what media/device the linked document is optimized for </td>
                 <td> <a class="more" href="https://www.w3schools.com/tags/att_a_media.asp"> List of AttributeValue </a>
                 </td>
             </tr>
             <tr>
-
                 <td> ping </td>
                 <td> Specifies a list of URLs to which, when the link is followed, post requests with the body ping will
                     be sent by the browser (in the background). Typically used for tracking. </td>
@@ -222,7 +244,6 @@
                 <td> "1" / "2" <br> etc.</td>
             </tr>
             <tr>
-
                 <td> rowspan </td>
                 <td> To make a cell span more than one row </td>
                 <td> "1" / "2" <br> etc.</td>
@@ -234,26 +255,22 @@
                 <td> "Url / Path to file "</td>
             </tr>
             <tr>
-
                 <td> autocomplete </td>
                 <td> Specifies whether a form should have autocomplete on or off<br>Based on values that the user has
                     entered before </td>
                 <td> "on" / "off"</td>
             </tr>
             <tr>
-
                 <td> name </td>
                 <td> Specifies the name of a form </td>
                 <td> "FormName"</td>
             </tr>
             <tr>
-
                 <td> method </td>
                 <td> Specifies the HTTP method to use when sending form-data </td>
                 <td> "get" / "post"</td>
             </tr>
             <tr>
-
                 <td> rel </td>
                 <td> Specifies the relationship between a linked resource and the current document </td>
                 <td> <a class="more" href="https://www.w3schools.com/tags/tag_form.asp"> "external" / "help" / "license"
@@ -261,13 +278,11 @@
                         "nofollow" / "noopener" / "noreferrer" / "opener" / "prev" / "search" </a></td>
             </tr>
             <tr>
-
                 <td> target </td>
                 <td> Specifies where to display the response that is received after submitting the form </td>
                 <td> "_blank" / "_parent"<br> / "_self" / "_top"</td>
             </tr>
             <tr>
-
                 <td> accept-charset </td>
                 <td> Specifies the character encodings that are to be used for the form submission </td>
                 <td> "UTF-8" / "ISO-8859-1" <br> <a class="more"
@@ -275,13 +290,11 @@
                     </a></td>
             </tr>
             <tr>
-
                 <td> enctype </td>
                 <td> Specifies how the form-data should be encoded when submitting it to the server </td>
                 <td> "application/x-www-form-urlencoded" / "multipart/form-data" / "text/plain"</td>
             </tr>
             <tr>
-
                 <td> novalidate </td>
                 <td> Specifies that the form should not be validated when submitted </td>
                 <td> <span class="Note">"no AttributeValue"</span></td>
@@ -293,20 +306,17 @@
                 <td> "formID"</td>
             </tr>
             <tr>
-
                 <td> type </td>
                 <td> Specifies the type of button </td>
                 <td> "button" / "reset" / "submit"</td>
             </tr>
             <tr>
-
                 <td> name </td>
                 <td> Specifies the name for a &lt;button&gt; element<br><span class="Note">Reference form-data/element
                         in JavaScript</span></td>
                 <td> " ButtonName "</td>
             </tr>
             <tr>
-
                 <td> value </td>
                 <td> Specifies an initial value for the button<br> <span class="Note"> Button's value is submitted only
                         with the "submit" type attribute <br>Buttons with different values may share the same name to
@@ -314,19 +324,16 @@
                 <td> "Button initial value"</td>
             </tr>
             <tr>
-
                 <td> autofocus </td>
                 <td> Specifies that a button should automatically get focus when the page loads </td>
                 <td> <span class="Note">"no AttributeValue"</span></td>
             </tr>
             <tr>
-
                 <td> disabled </td>
                 <td> Specifies that a button should be disabled </td>
                 <td> <span class="Note">"no AttributeValue"</span></td>
             </tr>
             <tr>
-
                 <td> formaction </td>
                 <td> Overrides the form's action attribute<br><span class="Look"> Only use in "submit" type attribute.
                     </span><br><span class="Note"> Specifies where to send the form-data when a form is submitted
@@ -334,14 +341,12 @@
                 <td> "Url / Path to file "</td>
             </tr>
             <tr>
-
                 <td> formmethod </td>
                 <td> Overrides the form's method attribute<br><span class="Note">Specifies the HTTP method to use when
                         sending form-data</span> </td>
                 <td> "get" / "post"</td>
             </tr>
             <tr>
-
                 <td> formtarget </td>
                 <td> Overrides the form's target attribute<br><span class="Look"> Only use in "submit" type attribute.
                     </span><br><span class="Note"> Specifies where to display the response that is received after
@@ -349,7 +354,6 @@
                 <td> "_blank" / "_parent"<br> / "_self" / "_top"</td>
             </tr>
             <tr>
-
                 <td> formenctype </td>
                 <td> Overrides the form's enctype attribute<br><span class="Look"> Only use in "submit" type attribute.
                     </span><br><span class="Note">Specifies how the form-data should be encoded when submitting it to
@@ -357,7 +361,6 @@
                 <td> "application/x-www-form-urlencoded" / "multipart/form-data" / "text/plain"</td>
             </tr>
             <tr>
-
                 <td> formnovalidate </td>
                 <td> Overrides the form's novalidate attribute<br><span class="Look"> Only use in "submit" type
                         attribute. </span><br><span class="Note"> Specifies that the form should not be validated when
@@ -369,7 +372,7 @@
     <p style="color:#ce6868;">All HTML elements can use 'Global Attribute'. <br> In this table, elements with 'Global
         Attribute' marked are elements with no 'Required or Optional Attributes'. </p>
 
-    <h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ..1 Global Attribute list </h3>
+    <h3 id="globAtt"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ..1 Global Attribute list </h3>
     <table>
         <caption> Global Attribute Table </caption>
         <thead>
@@ -509,10 +512,7 @@
         </tbody>
     </table>
 
-    <div class="pagebreak"> </div>
-    <h2>2. Differentiation Tag</h2>
-
-
+    <h2 id="diffTag">2. Differentiation Tag</h2>
     <table>
         <caption>Differentiation Tag </caption>
         <thead>
@@ -651,12 +651,7 @@
         </tbody>
     </table>
 
-
-
-    <div class="pagebreak"> </div>
-
-
-    <h2>3. Input Type</h2>
+    <h2 id="intType">3. Input Type</h2>
     <form>
         <table>
             <caption>Input Type *use with &lt;form&gt; and &lt;label&gt; element*</caption>
@@ -813,5 +808,113 @@
         </table>
     </form>
 
+    <h2 id="txtFor">4.HTML TEXT FORMAT</h2>
+    <table>
+        <caption>HTML text format</caption>
+        <thead>
+            <tr>
+                <th>Tag </th>
+                <th> Description </th>
+                <th> example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&lt;b&gt;</td>
+                <td> bold </td>
+                <td>
+                    <p>outer text <b>inner text </b> outer text </p>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;strong&gt;</td>
+                <td> bold <div class="Look">semantic "important"</div>
+                </td>
+                <td>
+                    <p>outer text <strong>inner text </strong> outer text </p>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;i&gt;</td>
+                <td> italic </td>
+                <td>
+                    <p>outer text <i>inner text </i> outer text </p>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;em&gt;</td>
+                <td> italic <div class="Look">semantic "emphasized"</div>
+                </td>
+                <td>
+                    <p>outer text <em>inner text </e> outer text </p>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;cite&gt;</td>
+                <td> italic <div class="Look">semantic "title of a work" </div>
+                </td>
+                <td>
+                    <p>outer text <cite>inner text </cite> outer text </p>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;dfn&gt;</td>
+                <td> italic <div class="Look">semantic "definition term"</div>
+                </td>
+                <td>
+                    <p>outer text <dfn>inner text </dfn> outer text </p>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;del&gt;</td>
+                <td> strike through <div class="Look">semantic "deleted text"</div>
+                </td>
+                <td>
+                    <p>outer text <del>inner text </del> outer text </p>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;ins&gt;</td>
+                <td> underline <div class="Look">semantic "inserted text"</div>
+                </td>
+                <td>
+                    <p>outer text <ins>inner text </ins> outer text </p>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;mark&gt;</td>
+                <td> highlight <div class="Look">semantic "highlight/marked"</div>
+                </td>
+                <td>
+                    <p>outer text <mark>inner text </mark> outer text </p>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;sub&gt;</td>
+                <td> subscript </td>
+                <td>
+                    <p>outer text <sub>inner text </sub> outer text </p>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;sup&gt;</td>
+                <td> superscript </td>
+                <td>
+                    <p>outer text <sup>inner text </sup> outer text </p>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;label&gt;</td>
+                <td>
+                    <div class="Look">semantic "label"</div>
+                </td>
+                <td>
+                    <p>outer text <label>inner text </label> outer text </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
 
 </html>

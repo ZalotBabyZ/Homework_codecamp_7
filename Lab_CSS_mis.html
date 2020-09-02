@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooptips-Pagination-NavBar-Dropdown</title>
+    <style>
+        h2{color:white; background-color:palevioletred;padding: 5px 20px;border-radius: 5px; border:papayawhip 3px dashed;}
+        ul{list-style-type:none; overflow:hidden; background-color:papayawhip; padding:3px; margin:0px;border:peru 3px double; }
+        a{display: block; text-align: center; text-decoration: none; transition:color .3s;}
+        
+        li a{display: block; text-align: center;font-size: 1.2rem; color: palevioletred; height:30px; width: 120px; border: 1px peru dashed}
+        li a:hover{background-color: palevioletred; color: white;}
+        li a:active{font-size: 1.5rem;}
+
+        .NavBar li,.pagination a{float:left;}
+
+        .Dropdown,.Dropdown ul{width:120px;padding: 5px; color:peru; text-align: center; border: 3px peru double;border-radius: 3px;}
+        .Dropdown ul{display: none; position: absolute;}
+        .Dropdown:hover ul{display:inherit; z-index: 1;}
+      
+        .pagination {display: inline-block;}
+        .pagination a{color:lightpink; border-radius: 3px; padding:10px; font-size: 1.5rem;}
+        .pagination a:hover:not(.active){background-color:papayawhip;color:peru;}
+        .pagination a.active{background-color:lavenderblush;color: palevioletred;border: 2px lavenderblush double;}
+        .tooltipEx{display:grid;grid-template:repeat(3,30%)/repeat(2,50%);}
+        .tooltipEx>*{display:flex;height:150px; width:99%; margin: 10px 0px; justify-content:center;align-items: center; border:3px lavender dotted;font-size: 1.2rem;text-align: center;} 
+        .tooltip{grid-area:1/1/2/3;border:double 4px lavender; background-color:lavender;color:palevioletred;font-size: 2rem;}
+        .tooltip~.tooltipBox1{visibility:hidden;background-color:lavenderblush}
+        .tooltip~.tooltipBox2{display:none;background-color:lavenderblush}
+        .tooltip:hover~.tooltipBox1{visibility:visible}
+        .tooltip:hover~.tooltipBox2{display:inherit}
+    </style>
+
+
+</head>
+<body>  
+    <h2 id="NavBar">Navigator Bar Lab</h2>
+    <ul class="NavBar">
+        <li><a href="#Tooltips">Tooltip</a></li>
+        <li><a href="#Pagination">Pagination</a></li>
+        <li><a href="#NavBar">Navigator Bar</a></li>
+        <li><a href="#Dropdown">Dropdown</a></li>
+    </ul>
+
+
+    <h2 id="Dropdown">Dropdown Lab</h2>
+    <div class="Dropdown">
+        DROPDOWN &#128432;
+    <ul>
+        <li><a href="#Tooltips">Tooltip</a></li>
+        <li><a href="#Pagination">Pagination</a></li>
+        <li><a href="#NavBar">Navigator Bar</a></li>
+        <li><a href="#Dropdown">Dropdown</a></li>
+    </ul>
+    </div>
+    
+    <h2 id="Pagination">Pagination Lab</h2>
+    <div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="#">1</a>
+    <a href="#" class="active">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    <a href="#">&raquo;</a>
+    </div>
+
+    <h2 id="Tooltips">ToolTip Lab & visibility:hidden; vs display:none; </h2>
+    <div class="tooltipEx">
+        <div class="tooltip"> This is Tooltip<br> Hover on to show<br> :2 x Tooltip box </div>
+        <div class="tooltipBox1">This is Tooltip box 1:<br>[visibility:hidden;]</div>
+        <div> Block after Tooltipbox1 <br>[visibility:hidden;]</div>
+        <div class="tooltipBox2">This is Tooltip box 2:<br>[display:none;]</div>
+        <div> Block after Tooltipbox2 <br>[display:none];<br><br>&lt;----------------&gt;</div>
+    
+    </div>
+</body>
+</html>

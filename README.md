@@ -11,4 +11,5 @@ Chutinan Chirdchoothum <br>
 | File/Folder Name | About |
 |----------------|----------------|
 | Lab.html | HTML LAB |
-| Lab_Grid-Flex folder | shop: tops <br> also has Lab Tootip and Dropdown  |
+| Lab_Grid-Flex folder | shop: tops <br> (also has Lab Tootip and Dropdown)  |
+|Lab_CSS_mis.html|Tooltips/Pagination/<br>Navigator Bar/ Dropdown|
