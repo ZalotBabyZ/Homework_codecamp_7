@@ -1,0 +1,96 @@
+/* เขียน CSS ที่นี่ */
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+  }
+
+.container{
+display: flex;
+flex-flow: column nowrap;
+height: 100vh;
+}
+
+    header{
+        display: flex;
+        width:100vw;
+        height: 15vh;
+        background-color: #008b8b;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .body{
+        display:flex;
+        flex-flow: row nowrap;
+    }
+        nav{
+            display: flex;
+            background-color: #ff7f50;
+            border-width: 2px 2px 1px 1px;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+            align-items: center;
+            flex:0 0 200px;
+        }
+            .nav__ul{
+                list-style-type: none;
+                width: 100%;
+            }
+                .nav__li{
+                    display: flex;
+                    background-color:#ffffff;
+                    margin: 3px 0px;
+                    padding: 5px;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .nav__link{
+                    display: block;
+                    text-decoration-line: none;
+                    color:#000000;
+                    width:100%;
+                    text-align: center;
+                }
+                .nav__li:hover{
+                    background-color: #f5deb3;
+                }
+                .nav__link:active{
+                    color: #000000;
+                }
+
+        main{
+            display: flex;
+            width: 250px;
+            background-color: #ff7f50;
+            border-width: 2px 1px 1px 1px;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column wrap;
+            flex: 1;
+        }
+
+        .ads{
+            display: flex;
+            background-color: #ff7f50;
+            border-width: 2px 1px 1px 2px;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            flex:0 0 200px;
+        }
+
+        nav,main,.ads{
+            height:75vh;
+            border-color: #ffffff;
+            border-style: solid;
+        }
+
+    footer{
+        display: flex;
+        width: 100%;
+        height: 10vh;
+        background-color: #f0e68c;
+        justify-content: center;
+        align-items: center;
+    }
