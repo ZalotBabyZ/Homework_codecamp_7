@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat ลับ</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            border: 0px;
+        }
+
+        .group {
+            display: flex;
+            background-color: #808080;
+            color: #ffffff;
+            height: 80px;
+            padding: 20px;
+            font-size: 32px;
+            font-weight: 700;
+            align-items: center;
+            margin-bottom: 35px;
+
+        }
+
+        .chatZone {
+            display: flex;
+            flex-flow: column;
+        }
+
+        .chat__my {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            position: relative;
+        }
+
+        .chat__friend {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        .bubble {
+            width: 400px;
+            margin: 15px 50px;
+            padding: 30px;
+            font-size: 30px;
+            border-radius: 45px;
+        }
+
+        .bubble__my {
+            background-color: #00b900;
+        }
+        .bubble__my--greenDing {
+            background-color: #00b900;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            right: 50px;
+            z-index: -2;
+        }
+        .bubble__my--BGontopDing {
+            background-color: #ffffff;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            right: 50px;
+            top: -20px;
+            z-index: -1;
+        }
+
+        .bubble__my--active {
+            background-color: #d3d3d3;
+        }
+
+        .bubble__friend {
+            background-color: #808080;
+        }
+        .bubble__my--active__X {
+            display: flex;
+            background-color: #a9a9a9;
+            color: #ffffff;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 30px;
+            position: absolute;
+            right: 50px;
+            top: 10px;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+            }
+
+    </style>
+
+</head>
+
+<body>
+    <header class="group">
+        แชทลับ คลับ CODECAMP
+    </header>
+    <div class="chatZone">
+        <div class="chat__my">
+            <div class="bubble bubble__my">
+                สวัสดีจ้า
+            </div>
+            <div class="bubble__my--greenDing"></div>
+            <div class="bubble__my--BGontopDing"></div>
+        </div>
+        <div class="chat__my">
+            <div class="bubble bubble__my--active">
+                Coding สนุกจังเลยคั้บ
+            </div>
+            <div class="bubble__my--active__X">
+                X
+            </div>
+        </div>
+        <div class="chat__my">
+            <div class="bubble bubble__my">
+                อิอิ
+            </div>
+        </div>
+        <div class="chat__friend">
+            <div class="bubble bubble__friend">
+                &#128545&#128545&#129324&#128545
+            </div>
+        </div>
+        <div class="chat__friend">
+            <div class="bubble bubble__friend">
+                &#128545&#129324&#128545&#129324
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

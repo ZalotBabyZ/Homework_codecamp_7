@@ -13,4 +13,5 @@ Chutinan Chirdchoothum<br>
 | Lab.html | HTML LAB |
 | Lab_Grid-Flex folder | shop: tops<br>(also has Lab Tooltip and Dropdown)  |
 |Lab_CSS_mis.html|Tooltips/Pagination/<br>Navigator Bar/ Dropdown|
-|flex-box_workshop folder| holy-grail-layout<br>CSS exercise 5 |
+|FlexBox_workshop folder| holy-grail-layout<br>CSS exercise 5 |
+|resume folder| resume with HTML&CSS|

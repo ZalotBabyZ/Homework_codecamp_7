@@ -37,7 +37,7 @@ height: 100vh;
                 list-style-type: none;
                 width: 100%;
             }
-                .nav__li{
+                .nav__ul>li{
                     display: flex;
                     background-color:#ffffff;
                     margin: 3px 0px;
@@ -52,7 +52,7 @@ height: 100vh;
                     width:100%;
                     text-align: center;
                 }
-                .nav__li:hover{
+                .nav__ul>li:hover{
                     background-color: #f5deb3;
                 }
                 .nav__link:active{
