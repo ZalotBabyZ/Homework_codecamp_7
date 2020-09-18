@@ -16,3 +16,4 @@ Chutinan Chirdchoothum<br>
 |FlexBox_workshop folder| holy-grail-layout<br>CSS exercise 5 |
 |resume folder| resume with HTML&CSS|
 |positioning.html|chat room exercise|
+|HTML_class_workshop.html|HTML FORM inclass workshop|

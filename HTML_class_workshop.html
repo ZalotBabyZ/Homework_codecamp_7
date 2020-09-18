@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>แบบฟอร์มกรอกประวัตินักเรียน</title>
+    <style>
+        .header {}
+
+        .form__label {
+            color: lightseagreen;
+        }
+
+        .form__input {
+            width: 70vw;
+            border:1px lightseagreen solid;
+            color:lightseagreen;
+            
+        }
+
+        .form__input--button {
+            width: 40%;
+            background-color:lightseagreen;
+
+        }
+
+        .block__distribute--horizontal{
+            display: flex;
+            justify-content: space-between;
+        }
+        .block__distribute--horizontal>*{
+            width: 50%;
+            height: 30px;
+        }
+
+        .form__input chang-bg
+         {
+            width: 40%;
+            background-color:lightseagreen;
+
+        }
+
+        input#file-upload-button {
+            background-color: red;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <form>
+        <table>
+            <tr>
+                <td colspan="2">
+                    <h2 class="header">แบบฟอร์มกรอกประวัตินักเรียน</h2>
+                </td>
+            </tr>
+            <tr>
+                <td><label class="form__label" for="name">ชื่อ:</label></td>
+                <td><input class="form__input" type="text" id="name" placeholder="ชื่อภาษาไทย"></td>
+            </tr>
+            <tr>
+                <td><label class="form__label" for="surname">นามสกุล:</label></td>
+                <td><input class="form__input" type="text" id="surname" placeholder="นามสกุลภาษาไทย"></td>
+            </tr>
+            <tr>
+                <td><label class="form__label" for="age">อายุ:</label></td>
+                <td><input class="form__input" type="number" id="age" max="30" min="1" step="1"></td>
+            </tr>
+            <tr>
+                <td><label class="form__label" for="birth">วัน เดือน ปีเกิด:</label></td>
+                <td><input class="form__input" type="date" id="birth"></td>
+            </tr>
+            <tr>
+                <td><label class="form__label" for="color">สีที่ชอบ:</label></td>
+                <td><input class="form__input" type="color" id="color"></td>
+            </tr>
+            <tr>
+                <td class="form__label">เพศ:</td>
+                <td>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female"> หญิง </label><br>
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="male"> ชาย </label>
+                </td>
+            </tr>
+            <tr>
+                <td><label class="form__label" for="photo">รูปประจำตัว:</label></td>
+                <td><div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                    </div>
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                      <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                    </div>
+                  </div></td>
+            </tr>
+            <tr>
+                <td><label class="form__label" for="quote">คติประจำใจ:</label></td>
+                <td><input class="form__input" type="text" id="quote" placeholder="จะพิมพ์อะไรก็พิมพ์"
+                        style="height:200px;"></td>
+            </tr>
+            <tr>
+                <td colspan=2><div class="block__distribute--horizontal"><input class="form__input--button" type="submit">
+                    <input class="form__input--button" type="reset"></div></td>
+            </tr>
+        </table>
+
+
+        
+    </form>
+
+</body>
+
+</html>
