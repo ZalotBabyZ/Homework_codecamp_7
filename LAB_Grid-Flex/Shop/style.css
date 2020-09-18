@@ -29,8 +29,7 @@
 
 a {
     text-decoration: none;
-    color: black;
-    target:"mainPage";         
+    color: black;      
 }
 
 
@@ -39,7 +38,6 @@ a.catList{
     text-decoration: none;
     padding: 5px 0 ;
     color: black;
-    target:"mainPage";
     justify-content: flex-start !important;
 }
 
