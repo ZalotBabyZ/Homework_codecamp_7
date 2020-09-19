@@ -1,16 +1,16 @@
 :root{
-    --1stText-color: #5C2E77;
-    --2ndText-color: #B29E3F;
-    --3rdText-color: #84A73B;
-    --1stBG-color: #b8a6c2;
-    --2ndBG-color: #fff8d7;
-    --3rdBG-color: #e7f3cd;
-    --1stHigh-color: #72498A;
-    --2ndHigh-color: #CEBC68;
-    --3rdHigh-color: #A2C161;
-    --1stNeu-color: #87659B;
-    --2ndNeu-color: #E7D892;
-    --3rdNeu-color: #BFD888;
+    --firstText-color: #5C2E77;
+    --secondText-color: #B29E3F;
+    --thirdText-color: #84A73B;
+    --firstBG-color: #b8a6c2;
+    --secondBG-color: #fff8d7;
+    --thirdBG-color: #e7f3cd;
+    --firstHigh-color: #72498A;
+    --secondHigh-color: #CEBC68;
+    --thirdHigh-color: #A2C161;
+    --firstNeu-color: #87659B;
+    --secondNeu-color: #E7D892;
+    --thirdNeu-color: #BFD888;
 }
 
 *{
@@ -28,14 +28,14 @@
 
 a{
     text-decoration: none;
-    color: var(--1stHigh-color);
+    color: var(--firstHigh-color);
     text-align: center;
     font-size: 1.05rem;
     padding: 3px;   
 }
     a:hover{
         cursor: pointer;
-        color: var(--2ndHigh-color);
+        color: var(--secondHigh-color);
         font-size: 1.3rem;
         padding: 3px;
     }
@@ -55,13 +55,13 @@ a{
         height: 50px;
         width: 50px;
         border-radius: 25px;
-        border: 2px var(--2ndHigh-color) solid;
+        border: 2px var(--secondHigh-color) solid;
         align-items: center;
     }
         .section:hover{
             width: 100%;
-            background-color: var(--2ndBG-color);
-            border: 5px var(--2ndHigh-color) solid;
+            background-color: var(--secondBG-color);
+            border: 5px var(--secondHigh-color) solid;
             transition: width 2s;
         }
     .sectionAbb{
@@ -71,12 +71,12 @@ a{
         font-weight: bolder;
         width: 50px;
         height: 50px;
-        color:var(--2ndHigh-color);
+        color:var(--secondHigh-color);
         justify-content: center;
         align-items: center;
     }
         .sectionAbb:hover{
-            color:var(--1stHigh-color);
+            color:var(--firstHigh-color);
             transition: color 1.5s;
         }
     .section--more{
@@ -85,7 +85,7 @@ a{
         .section:hover>.section--more{
             display: inline-flex;
             font-size: 1.2rem;
-            color:var(--1stHigh-color);
+            color:var(--firstHigh-color);
             position: relative;
             right: 15px;
             top:3px;
@@ -123,7 +123,7 @@ a{
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            color: var(--2ndText-color);
+            color: var(--secondText-color);
             font-size: 2.2rem;
         }
         .container__left{
@@ -139,7 +139,7 @@ a{
                 width: 300px;
                 height: 300px;
                 border-radius: 50%;
-                background-color: var(--2ndHigh-color);
+                background-color: var(--secondHigh-color);
                 justify-content: center;
                 align-items: center;
                 grid-area: 2/1/span 2/span 2;
@@ -170,12 +170,12 @@ a{
                 padding: 3px;
             }
             td:first-child{
-                color: var(--2ndText-color);
+                color: var(--secondText-color);
                 font-size: 1.2rem;
             }
             
             td:nth-child(2){
-                color: var(--1stText-color);
+                color: var(--firstText-color);
                 background-color: #ffffff;
                 border-style: inset;
             }
@@ -186,7 +186,7 @@ a{
             justify-content: center;
             align-items: center;
             font-size: 1.3rem;
-            color: var(--1stText-color);
+            color: var(--firstText-color);
         }
         .quote{
             grid-area: 8/1/span 1/span 4;
@@ -195,7 +195,7 @@ a{
             justify-content: center;
             align-items: center;
             font-size: 1.3rem;
-            color: var(--1stText-color);
+            color: var(--firstText-color);
         }
 
     .container{
@@ -218,14 +218,14 @@ a{
             display: flex;
             grid-area: 1/1/span 1/span 2;
             align-items: center;
-            color: var(--2ndText-color);
+            color: var(--secondText-color);
             font-size: 1.8rem;
             font-weight: bold;
         }
 
     .subContainer{
         display: flex;
-        border: 2px var(--2ndNeu-color) solid;
+        border: 2px var(--secondNeu-color) solid;
         margin:10px;
         width:100%;
         justify-content: center;
@@ -268,23 +268,23 @@ a{
         display: flex;
         justify-content: center;
         align-items:center;
-        background-color: var(--2ndNeu-color);
+        background-color: var(--secondNeu-color);
     }
 
 
 .topicHead>.topic{
-    color: var(--1stText-color);
+    color: var(--firstText-color);
     font-size: 1.4rem;
     font-weight:bold;
     text-align:center;
 }
 .subTopic{
-    color: var(--2ndHigh-color);
+    color: var(--secondHigh-color);
     font-size: 1.2rem;
     font-weight:bold;
     padding: 15px 0px;
     margin: 10px 0px;
-    border-bottom:3px var(--3rdNeu-color) dashed;
+    border-bottom:3px var(--thirdNeu-color) dashed;
 }
 
 
@@ -306,9 +306,9 @@ a{
             display: inline-flex;
             font-size: 1.1rem;
             font-weight: bold;
-            color: var(--3rdText-color);
-            background-color: var(--3rdBG-color);
-            border: 2px var(--3rdHigh-color) solid;
+            color: var(--thirdText-color);
+            background-color: var(--thirdBG-color);
+            border: 2px var(--thirdHigh-color) solid;
             width: 25%;
             height: 40px;
             justify-content: center;
@@ -316,9 +316,9 @@ a{
         }
         .skillContent{
             display: inline-flex;
-            color: var(--3rdText-color);
+            color: var(--thirdText-color);
             background-color:#ffffff;
-            border: 2px var(--3rdHigh-color) solid;
+            border: 2px var(--thirdHigh-color) solid;
             width: 70%;
             height: 40px;
             justify-content: center;
@@ -346,7 +346,7 @@ width:90%;
     display: flex;
     flex-flow: column;
     border-radius: 5px;
-    border: 1px var(--2ndHigh-color) solid;
+    border: 1px var(--secondHigh-color) solid;
     background-color: #ffffff;
     margin: 2px;
     padding: 0px 0px 15px 0px;
@@ -354,8 +354,8 @@ width:90%;
 .eduWork__year{
     border-radius: 5px;
     margin: 0px;
-    background-color: var(--2ndHigh-color);
-    color: var(--1stHigh-color);
+    background-color: var(--secondHigh-color);
+    color: var(--firstHigh-color);
     font-size: 1.1rem;
     font-weight: bold;
     padding: 5px;
