@@ -1,4 +1,4 @@
-/*
+
 // ข้อ 0 ภาษี
 let msg00="";
 function taxcal(income) {
@@ -19,10 +19,10 @@ function taxcal(income) {
 let incomeGet= +prompt("กรอกรายได้: ") 
 msg00 += "รายได้: "+incomeGet+"<br>";
 msg00 += taxcal(incomeGet);
-//alert(taxcal(incomeGet));
+alert(taxcal(incomeGet));
 document.getElementById("result00").innerHTML = msg00;
-*/
-/*
+
+
 // ข้อ 1
 let intGet = {
     numA: +prompt("หาเศษส่วนอย่างต่ำ ใส่ค่าเศษ"),
@@ -49,7 +49,7 @@ msg01 += " คือ " +LessMore.intMore + "/" + LessMore.intLess;
 }
 alert(msg01);
 document.getElementById("result01").innerHTML = msg01;
-*/
+
 
 // ข้อ 2
 let msg02 = "ผลบวก 160 162 164 ... 2048 คือ ";
@@ -58,7 +58,7 @@ for (let i = 160; i <= 2048; i += 2) {
     result02 += i;
 }
 msg02 += result02;
-//alert(msg02);
+alert(msg02);
 document.getElementById("result02").innerHTML = msg02;
 
 
@@ -69,10 +69,10 @@ for (let i = 163; i <= 815; i += 4) {
     result03 += i;
 }
 msg03 += result03;
-//alert(msg03);
+alert(msg03);
 document.getElementById("result03").innerHTML = msg03;
 
-/*
+
 // ข้อ 4
 let msg04="ตัวที่ n ของ 0 1 1 2 3 5 8 13 ... คือ ", nMinus2=0, nMinus1=1, result04;
 let intN_04 = prompt("หาfibonacciตัวที่ n: กรอกค่าn");
@@ -84,7 +84,7 @@ for (let i = 3; i <= intN_04; i++){
 msg04 += result04;
 alert(msg04);
 document.getElementById("result04").innerHTML = msg04;
-*/
+
 
 // ข้อ 5
 let msg05 = "1-2+3-4+...+18953-18954 คือ ";
@@ -98,7 +98,7 @@ for (let i = 1; i <= 18954; i++) {
     }
 }
 msg05 += result05;
-//alert(msg05);
+alert(msg05);
 document.getElementById("result05").innerHTML = msg05;
 
 // ข้อ 6
@@ -108,7 +108,7 @@ for (let i = 1; i <= 87; i++) {
     result06 += i * (i + 1);
 }
 msg06 += result06;
-//alert(msg06);
+alert(msg06);
 document.getElementById("result06").innerHTML = msg06;
 
 // ข้อ 7
@@ -118,7 +118,7 @@ for (let i = 1; i <= 87; i++) {
     result07 += i * (i + 1) * (i + 2);
 }
 msg07 += result07;
-//alert(msg07);
+alert(msg07);
 document.getElementById("result07").innerHTML = msg07;
 
 // ข้อ 8
@@ -128,12 +128,14 @@ for (let i = 1; i <= 155; i += 2) {
     result08 += i * (i + 2) * (i + 4);
 }
 msg08 += result08;
-//alert(msg08);
+alert(msg08);
 document.getElementById("result08").innerHTML = msg08;
-/*
+
+//ข้อ 9 = 8(ซ้ำ)
+
 // ข้อ 10
 let msg10 = "ค่าที่รับมา: ";
-let input10 = prompt("input number");
+let input10 = prompt("หาค่า min | input number: ");
 let min = input10;
 while (input10.trim().toLowerCase() !== "stop") {
     msg10 += input10 + " ";
@@ -143,13 +145,13 @@ while (input10.trim().toLowerCase() !== "stop") {
     }
 }
 msg10 += "<br> ค่าต่ำสุดคือ: " + min;
-//alert(msg10);
+alert(msg10);
 document.getElementById("result10").innerHTML = msg10;
-*/
-/*
+
+
 // ข้อ 11
 let msg11 = "ค่าที่รับมา: ";
-let input11 = prompt("input number");
+let input11 = prompt("หาค่าmin 3 ค่า | input number: ");
 let min1 = +input11;
 let min2 = +input11;
 let min3 = +input11;
@@ -178,65 +180,65 @@ while (input11.trim().toLowerCase() !== "stop") {
     input11 = prompt("input number");
 }
 msg11 += "<br> ค่าต่ำสุดคือ: " + min1 + " " + min2 + " " + min3;
-//alert(msg11);
+alert(msg11);
 document.getElementById("result11").innerHTML = msg11;
-*/
-/*
+
+
 // ข้อ 12
 let msg12 = "ค่าที่รับมา: ";
-let input12 = prompt("input number");
-let min = input12, max = input12;
+let input12 = prompt("หาค่า max min | input number: ");
+let min12 = input12, max12 = input12;
 while (input12.trim().toLowerCase() !== "stop") {
     input12 = Number(input12);
-    if (input12 < min) {
-        min = input12;
-    } else if (input12 > max) {
-        max = input12;
+    if (input12 < min12) {
+        min12 = input12;
+    } else if (input12 > max12) {
+        max12 = input12;
     }
     msg12 += input12 + " ";
     input12 = prompt("input number");
 }
-msg12 += "<br> ค่าต่ำสุดคือ: " + min + ", ค่าสูงสุดคือ: " + max;
-//alert(msg12);
+msg12 += "<br> ค่าต่ำสุดคือ: " + min12 + ", ค่าสูงสุดคือ: " + max12;
+alert(msg12);
 document.getElementById("result12").innerHTML = msg12;
-*/
-/*
+
+
 // ข้อ 13
 let msg13 = "ค่าที่รับมา: ";
-let input13 = prompt("input number");
-let min = input13, max = input13;
+let input13 = prompt("หาผลต่าง max min | input number: ");
+let min13 = input13, max13 = input13;
 while (input13.trim().toLowerCase() !== "stop") {
     input13 = Number(input13);
-    if (input13 < min) {
-        min = input13;
-    } else if (input13 > max) {
-        max = input13;
+    if (input13 < min13) {
+        min13 = input13;
+    } else if (input13 > max13) {
+        max13 = input13;
     }
     msg13 += input13 + " ";
     input13 = prompt("input number");
 }
-result13=max-min
+result13=max13-min13
 msg13 += "<br> ผลต่าง max,min คือ " + result13;
-//alert(msg13);
+alert(msg13);
 document.getElementById("result13").innerHTML = msg13;
-*/
-/*
+
+
 // ข้อ 14
 let msg14 = "ค่าที่รับมา: ";
-let input14 = prompt("input number");
-let average, sum = 0, count = 0;
+let input14 = prompt("หาค่าเฉลี่ย | input number: ");
+let average, sum = 0, count14 = 0;
 while (input14.trim().toLowerCase() !== "stop") {
     input14 = Number(input14);
     sum += input14;
-    count++;
+    count14++;
     msg14 += input14 + " ";
     input14 = prompt("input number");
 }
-average=sum/count;
+average=sum/count14;
 msg14 += "<br> ค่าเฉลี่ยคือ: " + average;
-//alert(msg14);
+alert(msg14);
 document.getElementById("result14").innerHTML = msg14;
-*/
+
 
 // ข้อ 15
 function tenPower(getNum) {
@@ -247,8 +249,8 @@ function tenPower(getNum) {
     }
     return powerCount
 }
-function reverseNum(Num,power) {
-    let result = 0, getNum=Num, num;
+function reverseNum(getNum,power) {
+    let result = 0, num;
     for (let i = 0; i <= power; i++){
         num = Math.floor(getNum/10**(power-i));
         result += num*10**i;
@@ -256,8 +258,8 @@ function reverseNum(Num,power) {
     }
     return result;
 }
-let msg15 = "ค่าที่รับมา: ";
-let input15 = +prompt("input number");
+let input15 = +prompt("กลับตัวเลข | input number");
+let msg15 = "ค่าที่รับมา: "+input15;
 let isMinus = false;
 if (input15 < 0) {
     input15 = -input15;
@@ -267,7 +269,7 @@ if (input15 < 0) {
 let result15=reverseNum(+input15, tenPower(input15));
 if (isMinus) {result15=-result15}
 msg15 += "<br> ค่าที่ได้คือ: " + result15;
-//alert(msg15);
+alert(msg15);
 document.getElementById("result15").innerHTML = msg15;
 
 /*
