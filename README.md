@@ -17,5 +17,6 @@ Chutinan Chirdchoothum<br>
 |resume folder| resume with HTML&CSS |
 |positioning.html|chat room exercise |
 |HTML_class_workshop.html|HTML FORM inclass workshop |
-|specialExerciseJS folder | JS special exercise 24 ข้อ |
-|retestProblem folder | JS retest problem 15 ข้อ <br> exercise ในห้อง |
+|/offlineHomework/basicJS<br>/specialExerciseJS folder | JS special exercise 24 ข้อ |
+|/offlineHomework/basicJS<br>/retestProblem folder | JS retest problem 15-1 ข้อ <br> + exercise ในห้อง |
+|/offlineHomework/advanceJS<br>/retestProblem2 folder | JS retest problem ชุด 2 15 ข้อ |
