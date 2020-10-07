@@ -19,4 +19,5 @@ Chutinan Chirdchoothum<br>
 |HTML_class_workshop.html|HTML FORM inclass workshop |
 |/offlineHomework/basicJS<br>/specialExerciseJS folder | JS special exercise 24 ข้อ |
 |/offlineHomework/basicJS<br>/retestProblem folder | JS retest problem 15-1 ข้อ <br> + exercise ในห้อง |
-|/offlineHomework/advanceJS<br>/retestProblem2 folder | JS retest problem ชุด 2 15 ข้อ |
+|/offlineHomework/advanceJS<br>/retestProblem2part1 folder | JS retest problem ชุด 2 part 1 15 ข้อ |
+|/offlineHomework/advanceJS<br>/retestProblem2part2 folder | JS retest problem ชุด 2 part 2 15 ข้อ |
