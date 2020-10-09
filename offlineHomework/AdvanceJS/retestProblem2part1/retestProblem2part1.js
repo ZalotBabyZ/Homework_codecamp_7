@@ -1,4 +1,4 @@
-// Retest problem 2
+// Retest problem 2 part 1
 
 // function รับ input prompt เป็น array เมื่อ user ไม่ได้กรอก parameter เวลาเรียกfunction
 // ใช้กับข้อ 7,8,10,11,12,13
@@ -131,7 +131,7 @@ function findGCD(list = getArray("หาครน.กรอกเลข 123 etc 
         }
     }
 }
-console.log("ข้อ7: findGCD([list])\n   [list] = [5,10,15] etc")
+console.log("ข้อ7: findGCD([list])\n   [list] = [5,10,15] etc");
 console.log(findGCD([6,8,16]));
 
 // ข้อ8
@@ -150,12 +150,12 @@ function findLCM(list = getArray("หาครน.กรอกเลข 123 etc 
     }
 
 }
-console.log("ข้อ8: findLCM([list])\n   [list] = [12,18,36] etc")
+console.log("ข้อ8: findLCM([list])\n   [list] = [12,18,36] etc");
 console.log(findLCM([24,48,96]));
 
 // ข้อ 9
 function factorial(n = +prompt("กรอกค่า n:")) {
-    return n < 0 ? `error ${n}!` : (n === 0 ? 1 : n * factorial(n - 1))
+    return n < 0 ? `error ${n}!` : (n === 0 ? 1 : n * factorial(n - 1));
 }
 console.log("ข้อ9: factorial(n)\n   n = ค่าสุดท้ายที่นำมาคูณ (ผลคูณตั้งแต่ 1-n)");
 console.log(factorial(5));
@@ -181,9 +181,9 @@ function sortList(list = getArray("เรียงค่า ascend/ descend ก�
     }
     console.log(` -> list: [${list}]\n    isAscend: ${isAscend}`);
     if (isAscend) {
-        return sortAscend
+        return sortAscend;
     } else {
-        return sortAscend.reverse()
+        return sortAscend.reverse();
     };
 }
 console.log("ข้อ10: sortList([list],isAscend)\n   [list] = [5,7,2,4,3] etc\n   isAscend = จากน้อยไปมาก->1 มากไปน้อย->0");
@@ -199,7 +199,7 @@ const sortList2 = (list = getArray("เรียงค่า ascend/ descend ก
             sortAscend.push(num);
         } else {
             if (sortAscend[sortAscend.length - 1] < num) {
-                sortAscend.push(num)
+                sortAscend.push(num);
             } else {
                 const tempSort = sortAscend.filter(item => item > num);
                 sortAscend = sortAscend.filter(item => item <= num);
@@ -211,11 +211,11 @@ const sortList2 = (list = getArray("เรียงค่า ascend/ descend ก
     }
     console.log(` -> list: [${list}]\n    isAscend: ${isAscend}`);
     if (isAscend) {
-        return sortAscend
+        return sortAscend;
     } else {
         let sortDescend = new Array();
         for (let count in list) sortDescend.push(sortAscend.pop());
-        return sortDescend
+        return sortDescend;
     };
 }
 console.log("ข้อ11: sortList2([list],isAscend)\n   [list] = [5,7,2,4,3] etc\n   isAscend = จากน้อยไปมาก->1 มากไปน้อย->0");
@@ -224,16 +224,16 @@ console.log(sortList2([8, 6, 10, 9, 11], 1));
 
 // ข้อ 12
 function multiplyOf(baseNum = +prompt("ค่าตั้งต้น:"), upperBorder = +prompt("สูงสุดไม่เกินค่า:")) {
-    let result = new Array()
+    let result = new Array();
     for (i = baseNum; i < upperBorder; i += baseNum) result.push(i);
     return result;
 }
 function sumMultiplyOf(baseNumList = getArray("กรอกเลข 3 etc เพื่อเพิ่มlistของค่าพหุคูณตั้งต้น"), upperBorder = +prompt("สูงสุดไม่เกินค่า:")) {
     console.log(` -> เลขตั้งต้น: [${baseNumList}]\n    ค่าไม่เกิน: ${upperBorder} `);
-    let multiplyAll = baseNumList.reduce((acc, num) => acc.concat(multiplyOf(num, upperBorder)), [])
+    let multiplyAll = baseNumList.reduce((acc, num) => acc.concat(multiplyOf(num, upperBorder)), []);
     multiplyAll = multiplyAll.filter((num, index) => multiplyAll.indexOf(num) === index);
     const sumAllMul = multiplyAll.reduce((acc, num) => acc += num, 0);
-    return sumAllMul
+    return sumAllMul;
 }
 console.log("ข้อ 12: sumMultiplyOf([list],upperBorder)\n   [list] = [3,5,7] เลขตั้งต้น\n   upperBorder = ค่าไม่เกินเลขนี้");
 console.log(sumMultiplyOf([3, 5], 1000));
@@ -265,7 +265,7 @@ function sumDigitFac(num = +prompt("กรอกเลขที่ต้อง�
     for (let digit of String(factorial)) {
         sumDigit += Number(digit);
     }
-    return sumDigit
+    return sumDigit;
 }
 console.log(`ข้อ 14: sumDigitFac(num)\n   num = เลขที่ต้องการทำเป็น factorial`);
 console.log(sumDigitFac(5));
@@ -273,10 +273,10 @@ console.log(sumDigitFac(5));
 // ข้อ 15 วิธีที่ 1 (นานมาก 1-4129980 วนloop 4,129,980 ครั้ง)
 function digitCount(startNum = +prompt("ค่าเริ่มต้นนับ: "), stopNum = +prompt("ค่าสุดท้ายที่นับ")) {
     console.log(`นับจำนวนเลขโดดตั้งแต่ ${startNum} ถึง ${stopNum}`);
-    countDigit = 0
+    countDigit = 0;
     for (let i = startNum; i <= stopNum; i++) {
         for (let num in String(i)) {
-            countDigit += 1
+            countDigit += 1;
         }
     }
     return countDigit;
@@ -290,12 +290,12 @@ function digitCount2(startNum = +prompt("ค่าเริ่มต้นนั
     console.log(`นับจำนวนเลขโดดตั้งแต่ ${startNum} ถึง ${stopNum}`);
     countDigit = 0;
     for (let i = String(startNum).length + 1; i <= String(stopNum).length - 1; i++) {
-        countDigit += i * 9 * 10 ** (i - 1)
+        countDigit += i * 9 * 10 ** (i - 1);
     }
-    countDigit += String(startNum).length * (10 ** String(startNum).length - startNum)
-    countDigit += String(stopNum).length * (stopNum - (10 ** (String(stopNum).length - 1) - 1))
+    countDigit += String(startNum).length * (10 ** String(startNum).length - startNum);
+    countDigit += String(stopNum).length * (stopNum - (10 ** (String(stopNum).length - 1) - 1));
 
-    return countDigit
+    return countDigit;
 }
 console.log(`ข้อ 15 วิธี 2(เร็ว):\n digitCount2(start,stop)\n   start = เลขเริ่มต้นนับ\n   stop = เลขสุดท้ายที่นับ`);
 console.log(digitCount2(1, 4129980));
